@@ -1,0 +1,11 @@
+version: '3.1'
+
+services:
+  app:
+    image: python:2.7
+    container_name: covpool
+    volumes:
+      - ./:/app
+    environment: 
+      - SGE_GPU=0
+    entrypoint: ["tail", "-f", "/dev/null"]
